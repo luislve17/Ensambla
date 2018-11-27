@@ -1,0 +1,9 @@
+x = -2;
+y = 3*x-1;
+z = 55;
+w = 11.3;
+
+println(x, y, z, w);
+
+aa = 123.4;
+println(y, aa);

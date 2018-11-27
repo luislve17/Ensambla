@@ -1,0 +1,361 @@
+Terminals unused in grammar
+
+   VARIABLE
+   ASIGNAR
+   SUMAR
+
+
+Grammar
+
+    0 $accept: S $end
+
+    1 S: PROGRAMA ID ';' listadeclaracion INICIO ListaInstr FIN '.'
+
+    2 listadeclaracion: %empty
+
+    3 ListaInstr: instr ListaInstr
+    4           | %empty
+
+    5 @1: %empty
+
+    6 $@2: %empty
+
+    7 instr: ID @1 ':' '=' expr $@2 ';'
+
+    8 expr: expr '+' term
+    9     | expr '-' term
+   10     | term
+
+   11 term: term '*' fact
+   12     | term '/' fact
+   13     | fact
+
+   14 fact: NUM
+   15     | ID
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+'*' (42) 11
+'+' (43) 8
+'-' (45) 9
+'.' (46) 1
+'/' (47) 12
+':' (58) 7
+';' (59) 1 7
+'=' (61) 7
+error (256)
+PROGRAMA (258) 1
+ID (259) 1 7 15
+INICIO (260) 1
+FIN (261) 1
+NUM (262) 14
+VARIABLE (263)
+ASIGNAR (264)
+SUMAR (265)
+
+
+Nonterminals, with rules where they appear
+
+$accept (19)
+    on left: 0
+S (20)
+    on left: 1, on right: 0
+listadeclaracion (21)
+    on left: 2, on right: 1
+ListaInstr (22)
+    on left: 3 4, on right: 1 3
+instr (23)
+    on left: 7, on right: 3
+@1 (24)
+    on left: 5, on right: 7
+$@2 (25)
+    on left: 6, on right: 7
+expr (26)
+    on left: 8 9 10, on right: 7 8 9
+term (27)
+    on left: 11 12 13, on right: 8 9 10 11 12
+fact (28)
+    on left: 14 15, on right: 11 12 13
+
+
+State 0
+
+    0 $accept: . S $end
+
+    PROGRAMA  shift, and go to state 1
+
+    S  go to state 2
+
+
+State 1
+
+    1 S: PROGRAMA . ID ';' listadeclaracion INICIO ListaInstr FIN '.'
+
+    ID  shift, and go to state 3
+
+
+State 2
+
+    0 $accept: S . $end
+
+    $end  shift, and go to state 4
+
+
+State 3
+
+    1 S: PROGRAMA ID . ';' listadeclaracion INICIO ListaInstr FIN '.'
+
+    ';'  shift, and go to state 5
+
+
+State 4
+
+    0 $accept: S $end .
+
+    $default  accept
+
+
+State 5
+
+    1 S: PROGRAMA ID ';' . listadeclaracion INICIO ListaInstr FIN '.'
+
+    $default  reduce using rule 2 (listadeclaracion)
+
+    listadeclaracion  go to state 6
+
+
+State 6
+
+    1 S: PROGRAMA ID ';' listadeclaracion . INICIO ListaInstr FIN '.'
+
+    INICIO  shift, and go to state 7
+
+
+State 7
+
+    1 S: PROGRAMA ID ';' listadeclaracion INICIO . ListaInstr FIN '.'
+
+    ID  shift, and go to state 8
+
+    $default  reduce using rule 4 (ListaInstr)
+
+    ListaInstr  go to state 9
+    instr       go to state 10
+
+
+State 8
+
+    7 instr: ID . @1 ':' '=' expr $@2 ';'
+
+    $default  reduce using rule 5 (@1)
+
+    @1  go to state 11
+
+
+State 9
+
+    1 S: PROGRAMA ID ';' listadeclaracion INICIO ListaInstr . FIN '.'
+
+    FIN  shift, and go to state 12
+
+
+State 10
+
+    3 ListaInstr: instr . ListaInstr
+
+    ID  shift, and go to state 8
+
+    $default  reduce using rule 4 (ListaInstr)
+
+    ListaInstr  go to state 13
+    instr       go to state 10
+
+
+State 11
+
+    7 instr: ID @1 . ':' '=' expr $@2 ';'
+
+    ':'  shift, and go to state 14
+
+
+State 12
+
+    1 S: PROGRAMA ID ';' listadeclaracion INICIO ListaInstr FIN . '.'
+
+    '.'  shift, and go to state 15
+
+
+State 13
+
+    3 ListaInstr: instr ListaInstr .
+
+    $default  reduce using rule 3 (ListaInstr)
+
+
+State 14
+
+    7 instr: ID @1 ':' . '=' expr $@2 ';'
+
+    '='  shift, and go to state 16
+
+
+State 15
+
+    1 S: PROGRAMA ID ';' listadeclaracion INICIO ListaInstr FIN '.' .
+
+    $default  reduce using rule 1 (S)
+
+
+State 16
+
+    7 instr: ID @1 ':' '=' . expr $@2 ';'
+
+    ID   shift, and go to state 17
+    NUM  shift, and go to state 18
+
+    expr  go to state 19
+    term  go to state 20
+    fact  go to state 21
+
+
+State 17
+
+   15 fact: ID .
+
+    $default  reduce using rule 15 (fact)
+
+
+State 18
+
+   14 fact: NUM .
+
+    $default  reduce using rule 14 (fact)
+
+
+State 19
+
+    7 instr: ID @1 ':' '=' expr . $@2 ';'
+    8 expr: expr . '+' term
+    9     | expr . '-' term
+
+    '+'  shift, and go to state 22
+    '-'  shift, and go to state 23
+
+    $default  reduce using rule 6 ($@2)
+
+    $@2  go to state 24
+
+
+State 20
+
+   10 expr: term .
+   11 term: term . '*' fact
+   12     | term . '/' fact
+
+    '*'  shift, and go to state 25
+    '/'  shift, and go to state 26
+
+    $default  reduce using rule 10 (expr)
+
+
+State 21
+
+   13 term: fact .
+
+    $default  reduce using rule 13 (term)
+
+
+State 22
+
+    8 expr: expr '+' . term
+
+    ID   shift, and go to state 17
+    NUM  shift, and go to state 18
+
+    term  go to state 27
+    fact  go to state 21
+
+
+State 23
+
+    9 expr: expr '-' . term
+
+    ID   shift, and go to state 17
+    NUM  shift, and go to state 18
+
+    term  go to state 28
+    fact  go to state 21
+
+
+State 24
+
+    7 instr: ID @1 ':' '=' expr $@2 . ';'
+
+    ';'  shift, and go to state 29
+
+
+State 25
+
+   11 term: term '*' . fact
+
+    ID   shift, and go to state 17
+    NUM  shift, and go to state 18
+
+    fact  go to state 30
+
+
+State 26
+
+   12 term: term '/' . fact
+
+    ID   shift, and go to state 17
+    NUM  shift, and go to state 18
+
+    fact  go to state 31
+
+
+State 27
+
+    8 expr: expr '+' term .
+   11 term: term . '*' fact
+   12     | term . '/' fact
+
+    '*'  shift, and go to state 25
+    '/'  shift, and go to state 26
+
+    $default  reduce using rule 8 (expr)
+
+
+State 28
+
+    9 expr: expr '-' term .
+   11 term: term . '*' fact
+   12     | term . '/' fact
+
+    '*'  shift, and go to state 25
+    '/'  shift, and go to state 26
+
+    $default  reduce using rule 9 (expr)
+
+
+State 29
+
+    7 instr: ID @1 ':' '=' expr $@2 ';' .
+
+    $default  reduce using rule 7 (instr)
+
+
+State 30
+
+   11 term: term '*' fact .
+
+    $default  reduce using rule 11 (term)
+
+
+State 31
+
+   12 term: term '/' fact .
+
+    $default  reduce using rule 12 (term)
