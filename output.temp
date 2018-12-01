@@ -1,31 +1,18 @@
-11.30000055.000000-7.000000-2.000000
-123.400000-7.000000
-
+2.000000
 ==============================
 cadena valida 
 Tabla de simbolos
-0 nombre=x         	tok=258 | valor=-2.000000
-1 nombre=-2        	tok=259 | valor=-2.000000
-2 nombre=y         	tok=258 | valor=-7.000000
-3 nombre=3         	tok=259 | valor=3.000000
-4 nombre=_T0       	tok=258 | valor=-6.000000
-5 nombre=1         	tok=259 | valor=1.000000
-6 nombre=_T1       	tok=258 | valor=-7.000000
-7 nombre=z         	tok=258 | valor=55.000000
-8 nombre=55        	tok=259 | valor=55.000000
-9 nombre=w         	tok=258 | valor=11.300000
-10 nombre=11.3      	tok=259 | valor=11.300000
-11 nombre=println   	tok=258 | valor=0.000000
-12 nombre=aa        	tok=258 | valor=123.400000
-13 nombre=123.4     	tok=259 | valor=123.400000
+0 nombre=x         	tok=258 | valor=4.000000
+1 nombre=4         	tok=259 | valor=4.000000
+2 nombre=y         	tok=258 | valor=2.000000
+3 nombre=sqrt      	tok=258 | valor=0.000000
+4 nombre=2.000000  	tok=259 | valor=2.000000
+5 nombre=_T0       	tok=258 | valor=2.000000
+6 nombre=print     	tok=258 | valor=0.000000
 
 Tabla de codigos
 0:ASSIGN              	fields: [0, 1, -1, -1, -1, -1, ]
-1:MUL                 	fields: [4, 3, 0, -1, -1, -1, ]
-2:RES                 	fields: [6, 4, 5, -1, -1, -1, ]
-3:ASSIGN              	fields: [2, 6, -1, -1, -1, -1, ]
-4:ASSIGN              	fields: [7, 8, -1, -1, -1, -1, ]
-5:ASSIGN              	fields: [9, 10, -1, -1, -1, -1, ]
-6:EVAL                	fields: [11, 9, 7, 2, 0, -1, ]
-7:ASSIGN              	fields: [12, 13, -1, -1, -1, -1, ]
-8:EVAL                	fields: [11, 12, 2, -1, -1, -1, ]
+1:EVAL                	fields: [3, 0, -1, -1, -1, -1, ]
+2:ASSIGN              	fields: [5, 4, -1, -1, -1, -1, ]
+3:ASSIGN              	fields: [2, 5, -1, -1, -1, -1, ]
+4:EVAL                	fields: [6, 2, -1, -1, -1, -1, ]

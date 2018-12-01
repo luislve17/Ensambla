@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<math.h>
 char lexema[255];
 void yyerror(char *);
 
@@ -56,7 +57,7 @@ exp:	assign	{$$=$1;}
 
 assign:	ID {$$=localizaSimb(lexema, ID);} '=' unitA {int elements[totalFields] = {$2, $4};int i = generaCodigo(ASSIGN, elements,2); evalCodigo(i);$$=i;};
 
-call: ID {$$=localizaSimb(lexema, ID);} '(' args ')' {int *elements = append($2, evalBuffer, bufferUsed);bufferUsed=0;int i = generaCodigo(EVAL, elements,totalFields); evalCodigo(i);$$=i;};
+call: ID {$$=localizaSimb(lexema, ID);} '(' args ')' {int *elements = append($2, evalBuffer, bufferUsed);bufferUsed=0;int i = generaCodigo(EVAL, elements,totalFields); $$=evalCodigo(i);};
 
 args:	element COM args {evalBuffer[bufferUsed++]=$1;}
 	|	element {evalBuffer[bufferUsed++]=$1;}
@@ -304,7 +305,7 @@ int evalCondition(int index){
 	}
 }
 
-void evalFunction(int* fields){
+int evalFunction(int* fields){
 	char* funName = TablaSim[fields[0]].nombre;
 	if(strcasecmp(funName, "print")==0){
 		for(int i = 1; i < totalFields; i++){
@@ -319,7 +320,20 @@ void evalFunction(int* fields){
 			}
 		}
 		printf("\n");
+	} else if(strcasecmp(funName, "sqrt")==0){
+		double result = sqrt(TablaSim[fields[1]].valor);
+		
+		char milexema[50];
+		snprintf(milexema, 50, "%lf", result);
+		
+		int indice_valor = localizaSimb(milexema, NUM);
+		int indice_contenedor = GenVarTemp();
+		int elements[totalFields] = {indice_contenedor, indice_valor};
+		int j=generaCodigo(ASSIGN, elements,2);
+		evalCodigo(j);
+		return indice_contenedor;
 	}
+	return -1;
 }
 
 void imprimeTablaSim(){

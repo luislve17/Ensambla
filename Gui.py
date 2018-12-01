@@ -122,7 +122,7 @@ class ToolBar(QWidget):
 		compiler = compiler[0].text().split(".")[0]
 		yacc_path = "./compilers/"+compiler+"/"+compiler+"_bison.y"
 		command1 = "bison -v " + yacc_path + " -o ./compilers/" + compiler + "/" + compiler + "_bison.tab.c"
-		command2 = "gcc ./compilers/" + compiler + "/" + compiler + "_bison.tab.c -w -o ./compilers/" + compiler + "/compiler"
+		command2 = "gcc ./compilers/" + compiler + "/" + compiler + "_bison.tab.c -w -lm -o ./compilers/" + compiler + "/compiler"
 		os.system(command1 + " && " + command2)
 		os.system('./compilers/' + compiler + '/compiler < input.temp > output.temp')
 		output = open("output.temp","r")

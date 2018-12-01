@@ -67,6 +67,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<math.h>
 char lexema[255];
 void yyerror(char *);
 
@@ -102,7 +103,7 @@ int evalBuffer[totalFields];
 int bufferUsed = 0;
 int* append(int, int*, int);
 
-#line 106 "./compilers/free/free_bison.tab.c" /* yacc.c:339  */
+#line 107 "./compilers/free/free_bison.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -179,7 +180,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 183 "./compilers/free/free_bison.tab.c" /* yacc.c:358  */
+#line 184 "./compilers/free/free_bison.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -479,14 +480,14 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    44,    44,    45,    47,    48,    50,    51,    52,    54,
-      55,    57,    57,    59,    59,    61,    62,    63,    64,    65,
-      67,    68,    69,    70,    72,    73,    74,    75,    76,    78,
-      79,    81,    82,    84,    85,    86,    87,    89,    90,    92,
-      93,    95,    96,    98,    99,   101,   102,   103,   104,   105,
-     106,   107,   108,   110,   110,   111,   111,   111,   112,   112,
-     112,   112,   113,   112,   126,   126,   126,   126,   126,   126,
-     127,   126,   146,   146
+       0,    45,    45,    46,    48,    49,    51,    52,    53,    55,
+      56,    58,    58,    60,    60,    62,    63,    64,    65,    66,
+      68,    69,    70,    71,    73,    74,    75,    76,    77,    79,
+      80,    82,    83,    85,    86,    87,    88,    90,    91,    93,
+      94,    96,    97,    99,   100,   102,   103,   104,   105,   106,
+     107,   108,   109,   111,   111,   112,   112,   112,   113,   113,
+     113,   113,   114,   113,   127,   127,   127,   127,   127,   127,
+     128,   127,   147,   147
 };
 #endif
 
@@ -1350,283 +1351,283 @@ yyreduce:
   switch (yyn)
     {
         case 5:
-#line 48 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 49 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1356 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1357 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 51 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 52 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[-1]);}
-#line 1362 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1363 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 54 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 55 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1368 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1369 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 55 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 56 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1374 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1375 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 57 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 58 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=localizaSimb(lexema, ID);}
-#line 1380 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1381 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 57 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 58 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {int elements[totalFields] = {(yyvsp[-2]), (yyvsp[0])};int i = generaCodigo(ASSIGN, elements,2); evalCodigo(i);(yyval)=i;}
-#line 1386 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1387 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 59 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 60 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=localizaSimb(lexema, ID);}
-#line 1392 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1393 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 59 "./compilers/free/free_bison.y" /* yacc.c:1646  */
-    {int *elements = append((yyvsp[-3]), evalBuffer, bufferUsed);bufferUsed=0;int i = generaCodigo(EVAL, elements,totalFields); evalCodigo(i);(yyval)=i;}
-#line 1398 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 60 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+    {int *elements = append((yyvsp[-3]), evalBuffer, bufferUsed);bufferUsed=0;int i = generaCodigo(EVAL, elements,totalFields); (yyval)=evalCodigo(i);}
+#line 1399 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 61 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 62 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalBuffer[bufferUsed++]=(yyvsp[-2]);}
-#line 1404 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1405 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 62 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 63 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalBuffer[bufferUsed++]=(yyvsp[0]);}
-#line 1410 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1411 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 65 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 66 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=-1;}
-#line 1416 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1417 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 67 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 68 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=localizaSimb(lexema,ID);}
-#line 1422 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1423 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 68 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 69 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=localizaSimb(lexema,NUM);}
-#line 1428 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1429 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 69 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 70 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {char str[255];strcpy(str, "-");strcat(str, lexema);(yyval)=localizaSimb(str, NUM);}
-#line 1434 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1435 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 70 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 71 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=localizaSimb(lexema,STRING);}
-#line 1440 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1441 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
-#line 78 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 79 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1446 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1447 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
-#line 79 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 80 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=!(yyvsp[0]);}
-#line 1452 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1453 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
-#line 81 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 82 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {int i=GenVarTemp();int elements[totalFields] = {i, (yyvsp[-2]), (yyvsp[0])};int j=generaCodigo((yyvsp[-1]), elements,3);evalCodigo(j);(yyval)=i;}
-#line 1458 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1459 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 32:
-#line 82 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 83 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1464 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1465 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
-#line 84 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 85 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {int i=GenVarTemp();int elements[totalFields] = {i, (yyvsp[-2]), (yyvsp[0])};int j=generaCodigo((yyvsp[-1]), elements,3);evalCodigo(j);(yyval)=i;}
-#line 1470 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1471 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 35:
-#line 86 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 87 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1476 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1477 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 89 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 90 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {int i=GenVarTemp();int elements[totalFields] = {i, (yyvsp[-2]), (yyvsp[0])};int j=generaCodigo((yyvsp[-1]), elements,3);evalCodigo(j);(yyval)=i;}
-#line 1482 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1483 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 38:
-#line 90 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 91 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1488 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1489 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 39:
-#line 92 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 93 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {int i=GenVarTemp();int elements[totalFields] = {i, (yyvsp[-5]), (yyvsp[-1])};int j=generaCodigo((yyvsp[-3]), elements,3);evalCodigo(j);(yyval)=i;}
-#line 1494 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1495 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 40:
-#line 93 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 94 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[0]);}
-#line 1500 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1501 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 41:
-#line 95 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 96 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=SUM;}
-#line 1506 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1507 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 42:
-#line 96 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 97 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=RES;}
-#line 1512 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1513 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 43:
-#line 98 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 99 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=DIV;}
-#line 1518 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1519 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 44:
-#line 99 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 100 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=MUL;}
-#line 1524 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1525 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 45:
-#line 101 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 102 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=EQ;}
-#line 1530 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1531 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 46:
-#line 102 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 103 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=NEQ;}
-#line 1536 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1537 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 47:
-#line 103 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 104 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=LES;}
-#line 1542 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1543 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 48:
-#line 104 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 105 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=MOR;}
-#line 1548 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1549 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 49:
-#line 105 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 106 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=LEQ;}
-#line 1554 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1555 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 50:
-#line 106 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 107 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=MEQ;}
-#line 1560 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1561 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 51:
-#line 107 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 108 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=AND;}
-#line 1566 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1567 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 52:
-#line 108 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 109 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=OR;}
-#line 1572 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1573 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 53:
-#line 110 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 111 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=evalCondition((yyvsp[0]));}
-#line 1578 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1579 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 54:
-#line 110 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 111 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=1;}
-#line 1584 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1585 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 55:
-#line 111 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 112 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=evalCondition((yyvsp[0]));}
-#line 1590 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1591 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 56:
-#line 111 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 112 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=(evalFlag+1)%2;}
-#line 1596 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1597 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 57:
-#line 111 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 112 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=1;}
-#line 1602 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1603 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 58:
-#line 112 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 113 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=cx+1;}
-#line 1608 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1609 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 59:
-#line 112 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 113 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=cx;}
-#line 1614 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1615 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 60:
-#line 112 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 113 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=evalCondition((yyvsp[-1]));}
-#line 1620 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1621 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 61:
-#line 112 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 113 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=0;}
-#line 1626 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1627 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 62:
-#line 113 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 114 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {
 						//printf("#REG%d#", $4);
 						int A=(yyvsp[-7]);
@@ -1639,53 +1640,53 @@ yyreduce:
 							evalLoop(A,C+B-A+1);
 						}
 					}
-#line 1643 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1644 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 63:
-#line 124 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 125 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=1;}
-#line 1649 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1650 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 64:
-#line 126 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 127 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=cx+1;}
-#line 1655 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1656 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 65:
-#line 126 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 127 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=cx;}
-#line 1661 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1662 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 66:
-#line 126 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 127 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=0;}
-#line 1667 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1668 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 67:
-#line 126 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 127 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=cx;}
-#line 1673 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1674 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 68:
-#line 126 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 127 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=cx;}
-#line 1679 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1680 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 69:
-#line 126 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 127 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {evalFlag=0;}
-#line 1685 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1686 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 70:
-#line 127 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 128 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {
 						int A1=(yyvsp[-11]);
 						int A2=(yyvsp[-9]);
@@ -1704,17 +1705,17 @@ yyreduce:
 							evalLoop(A1,CX);
 						}
 					}
-#line 1708 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1709 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
   case 72:
-#line 146 "./compilers/free/free_bison.y" /* yacc.c:1646  */
+#line 147 "./compilers/free/free_bison.y" /* yacc.c:1646  */
     {(yyval)=localizaSimb(lexema, ID);}
-#line 1714 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1715 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1718 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
+#line 1719 "./compilers/free/free_bison.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1942,7 +1943,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 147 "./compilers/free/free_bison.y" /* yacc.c:1906  */
+#line 148 "./compilers/free/free_bison.y" /* yacc.c:1906  */
 
 
 void yyerror(char *msg){
@@ -2103,7 +2104,7 @@ int evalCondition(int index){
 	}
 }
 
-void evalFunction(int* fields){
+int evalFunction(int* fields){
 	char* funName = TablaSim[fields[0]].nombre;
 	if(strcasecmp(funName, "print")==0){
 		for(int i = 1; i < totalFields; i++){
@@ -2118,7 +2119,20 @@ void evalFunction(int* fields){
 			}
 		}
 		printf("\n");
+	} else if(strcasecmp(funName, "sqrt")==0){
+		double result = sqrt(TablaSim[fields[1]].valor);
+		
+		char milexema[50];
+		snprintf(milexema, 50, "%lf", result);
+		
+		int indice_valor = localizaSimb(milexema, NUM);
+		int indice_contenedor = GenVarTemp();
+		int elements[totalFields] = {indice_contenedor, indice_valor};
+		int j=generaCodigo(ASSIGN, elements,2);
+		evalCodigo(j);
+		return indice_contenedor;
 	}
+	return -1;
 }
 
 void imprimeTablaSim(){
