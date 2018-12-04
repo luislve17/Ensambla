@@ -1,8 +1,9 @@
-error: syntax error
+
 ==============================
- cadena invalidaTabla de simbolos
-0 nombre=r0        	tok=258 | valor=0.000000
-1 nombre=0         	tok=259 | valor=0.000000
+cadena valida 
+Tabla de simbolos
+0 nombre=x         	tok=258 | valor=2.000000
+1 nombre=2         	tok=259 | valor=2.000000
 
 Tabla de codigos
 0:ASSIGN              	fields: [0, 1, -1, -1, -1, -1, ]

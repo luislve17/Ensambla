@@ -54,6 +54,11 @@ class Editor(QWidget):
 		self.editor_layout = QHBoxLayout()
 		self.editor_layout.addWidget(self.editor)
 		self.setLayout(self.editor_layout)
+
+		f = QFont();
+		f.setPointSize(12);
+		self.editor.setFont(f);
+
 		self.terminal = terminal
 
 	def setTerminal(self, terminal):
@@ -72,6 +77,10 @@ class IntegratedTerminal(QWidget):
 			background-color:rgb(0,0,0);
 			color:rgb(255,255,255)
 		""")
+		f = QFont();
+		f.setPointSize(12);
+		self.terminal.setFont(f);
+
 		self.terminal_layout.addWidget(self.terminal)
 		self.setLayout(self.terminal_layout)
 
