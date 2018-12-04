@@ -40,7 +40,7 @@ class Gui(QMainWindow):
 
 		self.main_splitter.addWidget(self.workspace)
 		self.main_splitter.addWidget(self.options)
-		self.main_splitter.setSizes([500,50])
+		self.main_splitter.setSizes([250,150])
 		self.main_layout.addWidget(self.main_splitter)
 
 		self.main_widget.setLayout(self.main_layout)

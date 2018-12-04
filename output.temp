@@ -1,18 +1,8 @@
-2.000000
+error: syntax error
 ==============================
-cadena valida 
-Tabla de simbolos
-0 nombre=x         	tok=258 | valor=4.000000
-1 nombre=4         	tok=259 | valor=4.000000
-2 nombre=y         	tok=258 | valor=2.000000
-3 nombre=sqrt      	tok=258 | valor=0.000000
-4 nombre=2.000000  	tok=259 | valor=2.000000
-5 nombre=_T0       	tok=258 | valor=2.000000
-6 nombre=print     	tok=258 | valor=0.000000
+ cadena invalidaTabla de simbolos
+0 nombre=r0        	tok=258 | valor=0.000000
+1 nombre=0         	tok=259 | valor=0.000000
 
 Tabla de codigos
 0:ASSIGN              	fields: [0, 1, -1, -1, -1, -1, ]
-1:EVAL                	fields: [3, 0, -1, -1, -1, -1, ]
-2:ASSIGN              	fields: [5, 4, -1, -1, -1, -1, ]
-3:ASSIGN              	fields: [2, 5, -1, -1, -1, -1, ]
-4:EVAL                	fields: [6, 2, -1, -1, -1, -1, ]
